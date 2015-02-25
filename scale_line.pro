@@ -45,7 +45,7 @@ PRO scale_line, in_line, hv_line, rfdi_line, out_line
 	if (comp_count gt 0) then begin
 
 		for i=0ULL, comp_count-1 do begin
-			cur_i = index_com[i]	
+			cur_i = index_comp[i]	
 			in_win = in_line[cur_i:cur_i+2,*]
 			hv_win = hv_line[cur_i:cur_i+2,*]
 			rfdi_win = rfdi_line[cur_i:cur_i+2,*]
