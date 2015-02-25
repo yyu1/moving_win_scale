@@ -38,7 +38,7 @@ PRO scale_line, in_line, hv_line, rfdi_line, out_line
 
 	;out_line = fltarr(xdim-2)
 
-	index = where((in_line[1:xdim] eq -1) and (hv_line[1:xdim] lt hv_water_thresh), count, complement = index_comp, ncomplement=comp_count)
+	index = where((in_line[1:xdim-2] eq -1) and (hv_line[1:xdim-2] lt hv_water_thresh), count, complement = index_comp, ncomplement=comp_count)
 
 	if (count gt 0) then out_line[index] = -1
 
